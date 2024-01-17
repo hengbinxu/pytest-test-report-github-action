@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "test-report-pytest-github-action"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "test_report_pytest_github_action"}]
+
+[tool.poetry.dependencies]
+python = "3.10.7"
+pytest = "^7.4.4"
+pytest-sugar = "^0.9.7"
+typing-extensions = "^4.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
