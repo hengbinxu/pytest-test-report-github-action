@@ -27,6 +27,9 @@ jobs:
       - name: Test with Pytest
         run: |
           pytest -s -v -l test_calculator.py --junit-xml=test-results.xml
+
+      # Use pytest-results-action
+      # https://github.com/marketplace/actions/pytest-results-actions
       - name: Surface failing tests
         if: always()
         uses: pmeier/pytest-results-action@main
