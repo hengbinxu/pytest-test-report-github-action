@@ -6,13 +6,14 @@ on:
       - main
   pull_request:
     types:
-      - [opened, reopened]
+      - opened
+      - reopened
     branches:
       - main
 
 jobs:
   Build-and-Test:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
