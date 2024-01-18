@@ -33,5 +33,5 @@ jobs:
         if: success() || failure() # run this step even if previous step failed
         with:
           name: Unit Tests # Name of the check run which will be created
-          path: test-results.xml # Path to test results
-          reporter: java-junit
+          path: "*.xml" # Path to test results
+          reporter: jest-junit
