@@ -59,7 +59,6 @@ jobs:
 
       - name: Check the output coverage
         run: |
-          set +o posix
           echo "Coverage Percantage - ${{ steps.coverageComment.outputs.coverage }}"
           echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
           echo "Coverage Warnings - ${{ steps.coverageComment.outputs.warnings }}"
@@ -69,8 +68,8 @@ jobs:
           echo "Coverage Tests - ${{ steps.coverageComment.outputs.tests }}"
           echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
           echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
-
-          echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
+          echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
+          echo "Summary Report - \${{ steps.coverageComment.outputs.summaryReport }}\"
 
       - name: Update Readme with Coverage Html
         if: ${{ github.ref == 'refs/heads/main' }}
