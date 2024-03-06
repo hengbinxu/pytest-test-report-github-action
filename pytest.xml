@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="test-calculator" errors="0" failures="0" skipped="0" tests="6" time="0.116" timestamp="2024-03-06T04:41:33.585522" hostname="fv-az1146-337"><testcase classname="test_calculator" name="test_add" time="0.000"><system-out>--------------------------------- Captured Out ---------------------------------
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="test-calculator" errors="0" failures="0" skipped="0" tests="6" time="0.066" timestamp="2024-03-06T06:26:38.545327" hostname="fv-az1024-904"><testcase classname="test_calculator" name="test_add" time="0.000"><system-out>--------------------------------- Captured Out ---------------------------------
 
 </system-out><system-err>--------------------------------- Captured Err ---------------------------------
 
