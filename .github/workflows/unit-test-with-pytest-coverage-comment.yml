@@ -69,7 +69,7 @@ jobs:
           echo "Coverage Tests - ${{ steps.coverageComment.outputs.tests }}"
           echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
           echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
-          echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
+
           echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
 
       - name: Update Readme with Coverage Html
