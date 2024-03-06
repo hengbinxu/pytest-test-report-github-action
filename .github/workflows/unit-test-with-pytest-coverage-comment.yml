@@ -61,7 +61,6 @@ jobs:
         run: |
           echo "Coverage Percantage - ${{ steps.coverageComment.outputs.coverage }}"
           echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
-          echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
           echo "Coverage Warnings - ${{ steps.coverageComment.outputs.warnings }}"
           echo "Coverage Errors - ${{ steps.coverageComment.outputs.errors }}"
           echo "Coverage Failures - ${{ steps.coverageComment.outputs.failures }}"
@@ -69,11 +68,12 @@ jobs:
           echo "Coverage Tests - ${{ steps.coverageComment.outputs.tests }}"
           echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
           echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
+          echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
 
       - name: Update Readme with Coverage Html
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
-          sed -i '/<!-- Pytest Coverage Comment:Begin -->/,/<!-- Pytest Coverage Comment:End -->/c\<!-- Pytest Coverage Comment:Begin -->\n${{ steps.coverageComment.outputs.coverageHtml }}\n<!-- Pytest Coverage Comment:End -->' ./README.md
+          sed -i '/<!-- Pytest Coverage Comment:Begin -->/,/<!-- Pytest Coverage Comment:End -->/c\<!-- Pytest Coverage Comment:Begin -->\n\${{ steps.coverageComment.outputs.coverageHtml }}\n<!-- Pytest Coverage Comment:End -->' ./README.md
 
       - name: Commit & Push changes to Readme
         if: ${{ github.ref == 'refs/heads/main' }}
