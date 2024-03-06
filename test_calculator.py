@@ -16,7 +16,7 @@ def test_subtract() -> None:
 def test_multiply() -> None:
     calculator = Calculator(10)
     calculator.multiply(2)
-    assert calculator.get_result() == 15
+    assert calculator.get_result() == 20
 
 
 def test_divide() -> None:
