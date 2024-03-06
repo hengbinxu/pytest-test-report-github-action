@@ -38,7 +38,7 @@ jobs:
           pytest-xml-coverage-path: ./coverage.xml
           title: Unit Test Coverage Report
           badge-title: Coverage
-          hide-badge: false
+          hide-badge: true
           hide-report: false
           create-new-comment: false
           hide-comment: false
