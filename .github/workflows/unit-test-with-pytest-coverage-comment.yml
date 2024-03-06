@@ -50,7 +50,7 @@ jobs:
           hide-badge: false
           hide-report: false
           create-new-comment: false
-          hide-comment: true
+          hide-comment: false
           report-only-changed-files: false
           remove-link-from-badge: false
           unique-id-for-comment: python3.10.7
@@ -69,6 +69,7 @@ jobs:
           echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
           echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
           echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
+          echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
 
       - name: Update Readme with Coverage Html
         if: ${{ github.ref == 'refs/heads/main' }}
