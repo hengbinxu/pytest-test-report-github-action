@@ -29,15 +29,16 @@ jobs:
 
       - name: Build coverage file
         run: |
-          pytest --junitxml=pytest.xml --cov-config=.coveragerc --cov-report=term-missing:skip-covered --cov=calculator test_calculator.py | tee pytest-coverage.txt
+          pytest --junitxml=pytest.xml --cov-config=.coveragerc --cov-report=term-missing:skip-covered --cov-report=xml:coverage.xml --cov=calculator test_calculator.py | tee pytest-coverage.txt
 
       - name: Pytest coverage comment
         uses: MishaKav/pytest-coverage-comment@main
         with:
           pytest-coverage-path: ./pytest-coverage.txt
+          pytest-xml-coverage-path: ./coverage.xml
           title: Unit Test Coverage Report
           badge-title: Coverage
-          hide-badge: false
+          hide-badge: true
           hide-report: false
           create-new-comment: false
           hide-comment: false
