@@ -27,7 +27,7 @@ class Calculator:
         try:
             self.result /= num
         except ZeroDivisionError:
-            print("Divisor can't be 0")
+            raise ZeroDivisionError("Divisor can't be 0")
         return self
 
     def reset(self) -> Self:

@@ -1,3 +1,4 @@
+import pytest
 from calculator import Calculator
 
 
@@ -23,6 +24,12 @@ def test_divide() -> None:
     calculator = Calculator(10)
     calculator.divide(2)
     assert calculator.get_result() == 5
+
+
+def test_zero_division_error() -> None:
+    with pytest.raises(ZeroDivisionError):
+        calculator = Calculator(10)
+        calculator.divide(0)
 
 
 def test_reset() -> None:
